@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-body">
+            <h4 class="card-title">Cadastrar Produto</h4>
+            <div [formGroup]="formGroup">
+                <div class="mb-3">
+                    <label for="" class="form-label">Nome</label>
+                    <input
+                        type="text"
+                        formControlName="nome"
+                        class="form-control"/>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button
+                        type="button"
+                        class="btn btn-success" (click)="salvar()">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <div class="d-flex justify-content-center align-items-center vh-100" style="background-color: rgba(0,0,0,0.03);">
+    <div class="row ">
+      <div class="form">
+        <div class="col-md-12">
+          <p class="header-text mb-3">Entrar</p>
+          <div class="mb-3">
+            <label for="login" class="form-label">Usuário</label>
+            <input type="text" class="form-control" name="login" id="login" aria-describedby="helpId" [(ngModel)] = "usuario"
+              placeholder="usuário" />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="senha" [(ngModel)]="senha"/>
+          </div>
+
+          <button type="button" class="btn btn-success w-100 rounded" (click)="login()">
+            Entrar
+          </button>
+
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center registrar bg-success">
+        <div class="container">
+          <div class="row mt-3">
+            <div class="text-center" style="color: white">
+              <p class="h3 mb-3">Seja bem vindo</p>
+              <p class="h6 mb-3" style="font-weight: lighter;">Não possui uma conta?</p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-outline-success" style="color: white; border-color: white;" (click)="registrar()">
+                Registrar-se
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

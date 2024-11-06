@@ -1,0 +1,16 @@
+.form {
+    border: transparent;
+    box-shadow: 0.5px 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 400px;
+    background-color: white;
+}
+
+.header-text {
+    font-size: 17pt;
+    font-weight: lighter;
+}
+
+.registrar {
+    width: 400px;
+}

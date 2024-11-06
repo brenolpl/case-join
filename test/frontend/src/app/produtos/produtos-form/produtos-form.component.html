@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-body">
+            <h4 class="card-title">Cadastrar Produto</h4>
+            <div [formGroup]="formGroup">
+                <div class="mb-3">
+                    <label for="" class="form-label">Nome</label>
+                    <input
+                        type="text"
+                        formControlName="nome"
+                        class="form-control"/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Descrição</label>
+                    <textarea class="form-control" rows="3" maxlength="1000" formControlName="descricao"></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="" class="form-label">Preço de Compra</label>
+                    <input
+                        type="text"
+                        formControlName="precoCompra"
+                        class="form-control"/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Preço de Venda</label>
+                    <input
+                        type="text"
+                        formControlName="precoVenda"
+                        class="form-control"/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Estoque</label>
+                    <input
+                        type="text"
+                        formControlName="estoque"
+                        class="form-control"/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Categoria</label>
+                    <select
+                        formControlName="categoriaId"
+                        class="form-select form-select-md">
+                        <option [value]="categoria.id" *ngFor="let categoria of categorias$ | async">{{categoria.nome}}</option>
+                    </select>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button
+                        type="button"
+                        class="btn btn-success" (click)="salvar()">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

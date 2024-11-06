@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-body">
+            <h4 class="card-title">Produtos</h4>
+            <button class="btn btn-outline-primary align" (click)="goToNovoProduto()">+</button>
+            
+            <div class="table-responsive-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Preço Venda</th>
+                            <th scope="col">Preço Compra</th>
+                            <th scope="col">Estoque</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="" *ngFor="let produto of produtos$ | async">
+                            <td scope="row">{{produto.nome}}</td>
+                            <td scope="row">{{produto.descricao}}</td>
+                            <td scope="row">{{produto.precoVenda}}</td>
+                            <td scope="row">{{produto.precoCompra}}</td>
+                            <td scope="row">{{produto.estoque}}</td>
+                            <td scope="row">{{produto.categoria.nome}}</td>
+                            <td scope="row">
+                                <button
+                                type="button"
+                                class="btn"
+                                (click)="goToProduto(produto.id)"
+                            >
+                                Editar
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger"
+                                (click)="excluirProduto(produto.id)"
+                            >
+                                Excluir
+                            </button>
+                            
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-body">
+            <h4 class="card-title">Categorias</h4>
+            <button class="btn btn-outline-primary align" (click)="goToNovaCategoria()">+</button>
+            
+            <div class="table-responsive-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="" *ngFor="let categoria of categorias$ | async">
+                            <td scope="row">{{categoria.nome}}</td>
+                            <td scope="row">
+                                <button
+                                type="button"
+                                class="btn"
+                                (click)="goToCategoria(categoria.id)"
+                            >
+                                Editar
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger"
+                                (click)="excluirCategoria(categoria.id)"
+                            >
+                                Excluir
+                            </button>
+                            
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
